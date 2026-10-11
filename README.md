@@ -1,8 +1,19 @@
 # ECE528_HW2
 *Section I: Review Questions
 **1. What is a hardware timer? What kinds of tasks do embedded systems commonly use hardware timers for?
+A hardware timer is a circuit inside a microcontroller or processor that counts clock pulses. This is used for common tasks, such as periodic execution of operations, like reading a sensor or changing the state of a LED, measuring time, like when debouncing a button, or when generating pulse width modulation, to control motor speed or servo position.
 
 **2. What is a clock signal used for in embedded systems? List the primary clock sources available on the MSP432P401R microcontroller and briefly describe each clock source.
+A clock signal is used as a reference to drive peripherals and ccoordinate operations.
+The primary clock sources available on the MSP432P401R are as follows:
+• LFXT
+• HFXT
+• DCO
+• Very Low-Power Low-Frequency Oscillator (VLO)
+• Low-Frequency Reference Oscillator (REFO)
+• Module Oscillator (MODOSC)
+• System Oscillator (SYSOSC)
+
 
 **3. Consider a 16-bit timer (e.g. Timer_A configured in up mode). If it counts upward, what is the maximum count value before it rolls over? Show your work.
 
