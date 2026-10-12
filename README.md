@@ -1,6 +1,7 @@
 # ECE528_HW2
 
 *Section I: Review Questions*
+
 **1. What is a hardware timer? What kinds of tasks do embedded systems commonly use hardware timers for?**
 A hardware timer is a circuit inside a microcontroller or processor that counts clock pulses. This is used for common tasks, such as periodic execution of operations, like reading a sensor or changing the state of a LED, measuring time, like when debouncing a button, or when generating pulse width modulation, to control motor speed or servo position.
 
@@ -16,8 +17,10 @@ The primary clock sources available on the MSP432P401R are as follows:
 • System Oscillator (SYSOSC) - Internal 5 MHz used for ADC operation at 200ksps sampling rate, along with the timing of various system-level control and management operations.
 
 **3. Consider a 16-bit timer (e.g. Timer_A configured in up mode). If it counts upward, what is the maximum count value before it rolls over? Show your work.**
+The maximum count value would be 0xFFFF in hexadecimal, or 2^16 - 1.
 
 **4. If a 24-bit timer counts upward from zero at 10 MHz, what is its overflow period? Show your work.**
+A 24-bit timer overflows after 2^24 ticks. At a rate of 10 MHz, each tick lasts 100ns, or 1/(10x10^6). The overflow period would then be: (2^24)/(10x10^6) = 16,777,216/10,000,000 = 1.6777216s.
 
 **5. Describe the SysTick timer on the MSP432P401R microcontroller. Provide two example applications for SysTick in embedded systems. Which clock sources can the SysTick timer use and how can they be selected?**
 
