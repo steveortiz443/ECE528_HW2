@@ -7,14 +7,13 @@ A hardware timer is a circuit inside a microcontroller or processor that counts 
 **2. What is a clock signal used for in embedded systems? List the primary clock sources available on the MSP432P401R microcontroller and briefly describe each clock source.**
 A clock signal is used as a reference to drive peripherals and ccoordinate operations.
 The primary clock sources available on the MSP432P401R are as follows:
-• LFXT
-• HFXT
-• DCO
-• Very Low-Power Low-Frequency Oscillator (VLO)
-• Low-Frequency Reference Oscillator (REFO)
-• Module Oscillator (MODOSC)
-• System Oscillator (SYSOSC)
-
+• LFXT - Uses low-frequency 32.768kHz crystals
+• HFXT - Uses high frequency crystals, capable of reaching 48 MHz
+• DCO - A power-efficient tunable internal oscillator that generates up to 48 MHz. Supports a high-precision mode when using an external precision resistor.
+• Very Low-Power Low-Frequency Oscillator (VLO) - an ultra-low-power internal oscillator that generates a low-accuracy clock signal around 9.4 kHz.
+• Low-Frequency Reference Oscillator (REFO) - An internal source configurable to a a low-power lower-accuracy source of a 32.768 kHz clock, instead of the LFXT, or as a 128 kHz clock.
+• Module Oscillator (MODOSC) - Internal 25 MHz oscillator with low-latency, used to supply a "clock on request" to different modules, like the ADC operation.
+• System Oscillator (SYSOSC) - Internal 5 MHz used for ADC operation at 200ksps sampling rate, along with the timing of various system-level control and management operations.
 
 **3. Consider a 16-bit timer (e.g. Timer_A configured in up mode). If it counts upward, what is the maximum count value before it rolls over? Show your work.**
 
